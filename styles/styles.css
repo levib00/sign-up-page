@@ -1,6 +1,9 @@
 /*{ border: 1px solid red; }*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 html {
     height:100%;
+    background-color: rgb(8, 8, 8);
+    font-family: 'Open Sans', sans-serif;
 }
 body {
     height: 100%;
@@ -13,31 +16,41 @@ body {
 
 }
 #image-container {
-    position: relative;
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
 }
 #sunset {
+    position: relative;
     height:100vh ;
     width: 800px;
-    margin: 0 0 -5px 0;
+    margin: 0 0 -15px 0;
+    z-index: 1;
 }
 .image-text {
-    position: absolute;
+    position: relative;
+    z-index: 1;
 }
 #credit-footer {
-    top: 900px;
+    
 }
 #logo {
-    top: 400px;
+    
+    
 }
 #form-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:rgb(8, 8, 8);
+    margin: 0 0 -5px 0;
 }
 fieldset {
     display: flex;
-    margin: 200px;
     flex-wrap: wrap;
+    border: none;
+    align-items: center;
+    justify-content: center;
 }
 .input-container {
     padding: 20px;
@@ -45,9 +58,57 @@ fieldset {
     flex-direction: column;
 }
 #sign-up-button {
-    position:relative;
-    left: 450px;
     height: 80px;
     width: 200px;
-    top: -90px;
+    justify-self: center;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #d53aa0;
+    border: rgb(8, 8, 8) 4px solid;
+    outline: #d53aa0 solid 3px;
+    outline-offset: 3px;
+    border-radius: 12px;
+
+}
+#sign-up-card {
+    border-top: 1px #d53aa0 solid;
+    border-bottom: 1px #d53aa0 solid;
+   /* outline: #d53aa0 solid 7px;*/
+    outline-offset: 5px;
+    box-shadow: #d53aa0 0px 0px 3px 3px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+input {
+    appearance: none;
+    height: 40px;
+    width: 300px;
+    outline: none;
+    box-shadow: none;
+
+}
+.fieldset-spacing {
+    display: flex;
+    flex-wrap: wrap;
+}
+label {
+    color: #d53aa0;
+    font-size: 24px;
+}
+.img-overlay {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 658px;
+}
+#align-button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 40px;
 }
