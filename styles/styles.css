@@ -14,11 +14,17 @@ body {
     display: flex; 
     margin: 0px;
 }
+@media (max-width:1345px) {
+    #page-container {
+        flex-direction: column;
+    }
+}
 /* left side of page styling */
 #image-container {
     display: flex;
     color: aliceblue;
     justify-content: center;
+    flex: 0 2 100%;
 }
 #sunset {
     position: relative;
@@ -35,7 +41,7 @@ body {
     align-items: center;
 }
 #credit-footer {
-    top: 572px;
+    top: calc(100vh - (70px + 150px + 170px));
     background-color: rgb(8, 8, 8, .67);
     width: 800px;
     height: 65px;
@@ -66,23 +72,44 @@ a {
     color: aliceblue;
 }
 /*right side of page styling */
+
 #form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:rgb(8, 8, 8);
     margin: 0 0 -5px 0;
+    
+}
+#intro-text {
+    margin: 40px 30px 0px 90px;
+    
 }
 #sign-up-card {
+    margin-top: 100px;
     border-top: 1px #d53aa0 solid;
     border-bottom: 1px #d53aa0 solid;
     outline-offset: 5px;
-    box-shadow: #d53aa0 0px 0px 3px 3px;
-    height: 300px;
+    box-shadow: #d53aa0 0px 0px 3px 2px, 
+                #ce51e2 0px 0px 5px 5px,
+                #5a34b5 0px 0px 7px 9px;
+    height: 400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    position: relative;
+    text-align: left;
+}
+
+@media (max-width: 1847px) {
+    #sign-up-card {
+        justify-content: left;
+        overflow: auto;
+        padding-left: 50px
+    }
+}
+
+#create-text {
+    margin: 0px 0px 0px 34px;
 }
 fieldset {
     display: flex;
@@ -99,23 +126,29 @@ fieldset {
 input {
     appearance: none;
     height: 40px;
-    width: 300px;
+    width: 290px;
     outline: none;
     box-shadow: none;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    border: #d53aa0 solid 3px;
+    border-radius: 9px;
+}
+input:focus {
+    border: #4a6ae8 solid 3px;
 }
 .fieldset-spacing {
     display: flex;
     flex-wrap: wrap;
 }
-label {
+label,
+.text {
     color: #d53aa0;
     font-size: 1.9rem;
 }
 #align-button {
     display: flex;
     justify-content: center;
-    position: relative;
+    
     margin-top: 40px;
 }
 #sign-up-button {
@@ -129,4 +162,5 @@ label {
     outline: #d53aa0 solid 3px;
     outline-offset: 3px;
     border-radius: 12px;
+    margin: 20px 0px 60px 0px;
 }
