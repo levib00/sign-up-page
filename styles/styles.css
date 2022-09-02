@@ -1,4 +1,8 @@
 /* whole page styling */
+@font-face {
+    font-family:'broadway' ;
+    src: url(./fonts/ufonts.com_broadway.woff);
+}
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 html {
     height:100%;
@@ -41,18 +45,20 @@ body {
     align-items: center;
 }
 #credit-footer {
-    top: calc(100vh - (70px + 150px + 170px));
     background-color: rgb(8, 8, 8, .67);
+    top: calc(100vh - (69px + 150px + 170px)); /*Keeps credit footer at the base of the image*/
     width: 800px;
     height: 65px;
+    display: flex;
 }
 #logo {
+    font-family: 'broadway';
     position: relative;
     top: 0px;
     background-color: rgb(8, 8, 8, .67);
     width: 800px;
     height: 170px;
-    font-size: 68px;
+    font-size: 82px;
 }
 .img-overlay {
     position: absolute;
@@ -82,7 +88,7 @@ a {
     
 }
 #intro-text {
-    margin: 40px 30px 0px 90px;
+    margin: 40px 30px 0px 40px;
     
 }
 #sign-up-card {
@@ -136,6 +142,16 @@ input {
 input:focus {
     border: #4a6ae8 solid 3px;
 }
+input.error, input:invalid:not(:focus):not(:placeholder-shown) {
+    box-shadow: inset red 0px 0px 4px 0px;
+    border: red 3px solid;
+}
+#invalid-pass {
+    color:red;
+    font-size: 1rem;
+    visibility: hidden;
+    padding: 5px 0px 0px 1px
+}
 .fieldset-spacing {
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +159,7 @@ input:focus {
 label,
 .text {
     color: #d53aa0;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
 }
 #align-button {
     display: flex;
@@ -163,4 +179,13 @@ label,
     outline-offset: 3px;
     border-radius: 12px;
     margin: 20px 0px 60px 0px;
+}
+#sign-up-button:hover {
+    outline: rgb(8, 8, 8) solid 3px;
+    border: #d53aa0 4px solid;
+    background-color: rgb(8, 8, 8);
+    color: #d53aa0;
+}
+#sign-up-button:active {
+    color:aliceblue
 }
